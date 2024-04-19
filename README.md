@@ -10,16 +10,16 @@
 
 ## Descripción
 
-> [!NOTE]
-> Crear una breve descripción de su proyecto.
+> Esta aplicación móvil funcionará como una interfaz amigable de visualización de datos que recoge un robot contra incendios, como también aportará funcionalidades de monitoreo del mismo.  
 
 ### Funcionalidades
 
 1. **Inicio de sesión:** Los usuarios pueden iniciar sesión en la aplicación.
 2. **Registro de usuario:** Los usuarios pueden registrarse en la aplicación.
-3. **Evaluación de temperaturas:**
-4. **Medición de gases y comportamiento de fuego:**
-5. **Información de monitoreo del robot:**
+3. **Evaluación de temperaturas:** Dentro de la aplicación, el usuario podrá visualizar las temperaturas medidas por el robot durante las últimas horas.
+   También podrá obtener un promedio de temperaturas según días, semanas y meses.
+5. **Medición de gases y comportamiento de fuego:**
+6. **Información de monitoreo del robot:**
 
 ## Prototipo
 
