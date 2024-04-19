@@ -10,7 +10,7 @@
 
 ## Descripción
 
-> Esta aplicación móvil funcionará como una interfaz amigable de visualización de datos que recoge un robot contra incendios, como también aportará funcionalidades de monitoreo del mismo.  
+Esta aplicación móvil funcionará como una interfaz amigable de visualización de datos que recoge un robot contra incendios, como también aportará funcionalidades de monitoreo del mismo.  
 
 ### Funcionalidades
 
