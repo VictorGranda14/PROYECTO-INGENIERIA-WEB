@@ -13,9 +13,9 @@
 > [!NOTE]
 > Crear una breve descripción de su proyecto.
 
-### Funcionalidades
+## Funcionalidades
 
-> 
+1. Adjkfhdsk
 
 ## Prototipo
 
