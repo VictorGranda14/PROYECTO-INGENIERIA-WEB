@@ -15,7 +15,7 @@
 
 ### Funcionalidades
 
-1. **Inicio de sesión::**
+1. **Inicio de sesión:**
 2. **Registro de usuario:**
 3. **Evaluación de temperaturas:**
 4. **Medición de gases:**
