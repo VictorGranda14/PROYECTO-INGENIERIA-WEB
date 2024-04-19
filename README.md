@@ -13,9 +13,13 @@
 > [!NOTE]
 > Crear una breve descripción de su proyecto.
 
-## Funcionalidades
+### Funcionalidades
 
-1. Adjkfhdsk
+1. **Inicio de sesión::**
+2. **Registro de usuario:**
+3. **Evaluación de temperaturas:**
+4. ***Medición de gases:**
+5. **Comportamiento de fuego:**
 
 ## Prototipo
 
