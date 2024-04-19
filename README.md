@@ -15,8 +15,7 @@
 
 ### Funcionalidades
 
-> [!NOTE]
-> Crear una lista numerada con las funcionalidades propuestas para su proyecto.
+> 
 
 ## Prototipo
 
