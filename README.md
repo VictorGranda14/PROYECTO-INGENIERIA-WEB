@@ -15,8 +15,8 @@
 
 ### Funcionalidades
 
-1. **Inicio de sesión:**
-2. **Registro de usuario:**
+1. **Inicio de sesión:** Los usuarios pueden iniciar sesión en la aplicación.
+2. **Registro de usuario:** Los usuarios pueden registrarse en la aplicación.
 3. **Evaluación de temperaturas:**
 4. **Medición de gases:**
 5. **Comportamiento de fuego:**
