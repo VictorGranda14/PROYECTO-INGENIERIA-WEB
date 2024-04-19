@@ -18,8 +18,8 @@
 1. **Inicio de sesión:** Los usuarios pueden iniciar sesión en la aplicación.
 2. **Registro de usuario:** Los usuarios pueden registrarse en la aplicación.
 3. **Evaluación de temperaturas:**
-4. **Medición de gases:**
-5. **Comportamiento de fuego:**
+4. **Medición de gases y comportamiento de fuego:**
+5. **Información de monitoreo del robot:**
 
 ## Prototipo
 
