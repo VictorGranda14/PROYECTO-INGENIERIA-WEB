@@ -18,9 +18,8 @@ Esta aplicación móvil funcionará como una interfaz amigable de visualización
 2. **Registro de usuario:** Los usuarios pueden registrarse en la aplicación.
 3. **Evaluación de temperaturas:** Dentro de la aplicación, el usuario podrá visualizar las temperaturas medidas por el robot durante las últimas horas.
    También podrá obtener un promedio de temperaturas según días, semanas y meses.
-5. **Medición de gases y comportamiento de fuego:** Los usuarios pueden visualizar el porcentaje de húmedad y presión en el ambiente. Además, se podrá ver en
-    que rango se encuentran estos valores. 
-6. **Información de monitoreo del robot:**
+5. **Medición de gases:** Los usuarios pueden visualizar la calidad del aire del ambiente y ver en que rango se encuentra este valor. Además, se puede ver el detalle del análisis. 
+6. **Información de monitoreo del robot:** Los usuarios pueden visualizar distintos apartados técnicos del robot, como la batería, versión actual, modelo, entre otras.
 
 ## Prototipo
 
