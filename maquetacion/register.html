@@ -61,7 +61,112 @@
       </div>
     </nav>
 
-    <div class="container p-4"></div>
+    <div class="container p-4 mt-5">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <h3 class="text-center">Crear una nueva cuenta</h3>
+          <div
+            class="card card-body mt-3"
+            style="background-color: #826e5a; border: 0"
+          >
+            <form action="/login" method="POST">
+              <div class="mb-3">
+                <input
+                  style="background-color: #f6f1d8; border: 0"
+                  type="text"
+                  placeholder="Nombre de usuario"
+                  class="form-control"
+                  id="username"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  style="background-color: #f6f1d8; border: 0"
+                  type="text"
+                  placeholder="RUT"
+                  class="form-control"
+                  id="rut"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  style="background-color: #f6f1d8; border: 0"
+                  type="email"
+                  placeholder="Email"
+                  class="form-control"
+                  id="email"
+                  required
+                />
+              </div>
+
+              <!-- TODO: agregar placeholders a los select de comuna y region -->
+              <div class="mb-3">
+                <select
+                  style="background-color: #f6f1d8; border: 0"
+                  placeholder="Seleccione su región"
+                  class="form-select"
+                  id="region"
+                  required
+                ></select>
+              </div>
+              <div class="mb-3">
+                <select
+                  style="background-color: #f6f1d8; border: 0"
+                  placeholder="Seleccione su comuna"
+                  class="form-select"
+                  id="comuna"
+                  required
+                ></select>
+              </div>
+              <div class="mb-3">
+                <input
+                  style="background-color: #f6f1d8; border: 0"
+                  type="password"
+                  placeholder="Contraseña"
+                  class="form-control"
+                  id="password"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  style="background-color: #f6f1d8; border: 0"
+                  type="password"
+                  placeholder="Confirme su contraseña"
+                  class="form-control"
+                  id="password-verify"
+                  required
+                />
+              </div>
+
+              <!-- TODO: cambiar el orden del switch y el label -->
+
+              <div class="form-check form-switch">
+                <label for="accept-terms" class="form-label"
+                  >Acepto los términos y condiciones</label
+                >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="accept-terms"
+                  name="terms"
+                />
+              </div>
+
+              <button
+                type="submit"
+                class="btn p-2"
+                style="background-color: #f96f5d; color: white"
+              >
+                <strong>Registrarse</strong>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

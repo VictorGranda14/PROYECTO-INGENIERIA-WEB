@@ -61,14 +61,18 @@
       </div>
     </nav>
 
-    <div class="container p-4">
+    <div class="container p-4 mt-5">
       <div class="row">
         <div class="col-md-6 mx-auto">
-          <div class="card card-body">
-            <h3 class="text-center">Inicio de sesión</h3>
+          <h3 class="text-center">Inicio de sesión</h3>
+          <div
+            class="card card-body mt-3 text-center"
+            style="background-color: #826e5a; border: 0"
+          >
             <form action="/login" method="POST">
               <div class="mb-3">
                 <input
+                  style="background-color: #f6f1d8; border: 0"
                   type="text"
                   placeholder="Nombre de usuario"
                   class="form-control"
@@ -78,6 +82,7 @@
               </div>
               <div class="mb-3">
                 <input
+                  style="background-color: #f6f1d8; border: 0"
                   type="password"
                   placeholder="Contraseña"
                   class="form-control"
@@ -85,8 +90,20 @@
                   required
                 />
               </div>
-              <button type="submit" class="btn btn-red">Iniciar sesión</button>
+              <button
+                type="submit"
+                class="btn p-2"
+                style="background-color: #f96f5d; color: white"
+              >
+                Iniciar sesión
+              </button>
             </form>
+          </div>
+          <div class="mt-3" style="text-align: center">
+            <p>Si no posees cuenta, puedes registarte</p>
+            <a href="/register.html" style="text-decoration: none; color: black"
+              ><strong>Crear una nueva cuenta</strong></a
+            >
           </div>
         </div>
       </div>
