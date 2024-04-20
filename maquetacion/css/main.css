@@ -1,0 +1,34 @@
+.infobox-2 {
+    background-color: #F6F1D8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.infobox {
+    background-color: #F6F1D8;
+    color: gray;
+}
+
+.infocolor {
+    background-color: #F6F1D8;
+}
+
+.maincolor {
+    background-color: #826E5A;
+}
+
+.redcolor {
+    background-color: #F96F5D;
+}
+
+.btn-red {
+    background-color: #F96F5D;
+    border-color: #F96F5D;
+    color: white;
+}
+
+.tempcolor {
+    background-color: #A8C5FF;
+}
