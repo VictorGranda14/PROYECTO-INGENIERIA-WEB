@@ -4,51 +4,142 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>HeatBot</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/main.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/380ebd8fc2.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="maincolor">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>HeatBot</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="img/fire-solid.svg" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/380ebd8fc2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="maincolor">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
 
-
-        <nav class="navbar navbar-expand-lg navbar-dark shadow-sm redcolor">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"><i class="fa-solid fa-fire"></i> HeatBot</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/temperature.html"><i class="fa-solid fa-temperature-high"></i> Temperatura</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"><i class="fa-solid fa-cloud"></i> Gases</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/settings.html"><i class="fa-solid fa-gear"></i> Ajustes</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div class="container p-4">
-            
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm redcolor">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><i class="fa-solid fa-fire"></i> HeatBot</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html"
+                ><i class="fa-solid fa-house"></i> Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/temperature.html"
+                ><i class="fa-solid fa-temperature-high"></i> Temperatura</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"
+                ><i class="fa-solid fa-cloud"></i> Gases</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/settings.html"
+                ><i class="fa-solid fa-gear"></i> Ajustes</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    </body>
+    <div class="container p-4">
+      <div
+        class="container p-4 my-4 text-center gascolor rounded d-flex justify-content-between"
+      >
+        <div>
+          <h1>Calidad del aire</h1>
+          <h1>(ICA)</h1>
+        </div>
+        <div><h1 class="display-1">55</h1></div>
+      </div>
+
+      <i
+        style="position: relative; left: 30%"
+        class="fa-solid fa-sort-down"
+      ></i>
+      <div class="d-flex mb-3 ica-index">
+        <div
+          style="background-color: #639950; color: white"
+          class="p-2 flex-fill"
+        >
+          Sin riesgo
+        </div>
+        <div class="p-2 gascolor flex-fill">Moderado</div>
+        <div
+          style="background-color: #bd5a5a; color: white"
+          class="p-2 flex-fill"
+        >
+          Dañino
+        </div>
+        <div
+          style="background-color: #f52121; color: white"
+          class="p-2 flex-fill"
+        >
+          Muy dañino
+        </div>
+      </div>
+
+      <hr />
+      <p style="color: rgb(77, 77, 77)">Detalle</p>
+      <div class="infocolor rounded">
+        <table class="table">
+          <tr class="gas-table">
+            <td>CO</td>
+            <td>5 ppm</td>
+          </tr>
+          <tr class="gas-table">
+            <td>Amoniaco</td>
+            <td>2 ppb</td>
+          </tr>
+          <tr class="gas-table">
+            <td>Sulfuro</td>
+            <td>0.0</td>
+          </tr>
+          <tr class="gas-table">
+            <td>Benceno</td>
+            <td>0.0</td>
+          </tr>
+          <tr class="gas-table">
+            <td>Humo</td>
+            <td>0.0</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

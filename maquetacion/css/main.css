@@ -1,34 +1,47 @@
 .infobox-2 {
-    background-color: #F6F1D8;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
+  background-color: #f6f1d8;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.ica-index {
+  width: 100%;
+}
+
+.gas-table {
+  border-bottom: 1px solid rgb(50, 48, 48);
+}
+
+.gascolor {
+  background-color: #f7b476;
+  color: white;
 }
 
 .infobox {
-    background-color: #F6F1D8;
-    color: gray;
+  background-color: #f6f1d8;
+  color: gray;
 }
 
 .infocolor {
-    background-color: #F6F1D8;
+  background-color: #f6f1d8;
 }
 
 .maincolor {
-    background-color: #826E5A;
+  background-color: #826e5a;
 }
 
 .redcolor {
-    background-color: #F96F5D;
+  background-color: #f96f5d;
 }
 
 .btn-red {
-    background-color: #F96F5D;
-    border-color: #F96F5D;
-    color: white;
+  background-color: #f96f5d;
+  border-color: #f96f5d;
+  color: white;
 }
 
 .tempcolor {
-    background-color: #A8C5FF;
+  background-color: #a8c5ff;
 }
