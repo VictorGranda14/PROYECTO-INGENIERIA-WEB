@@ -30,9 +30,11 @@ Esta aplicación móvil funcionará como una interfaz amigable de visualización
 </div>
 
 ## Maquetación web
-
-> [!NOTE]
-> Debe incluir los archivos de maquetación en la carpeta respectiva, e incluir una breve descripción de dichos archivos.
+En la carpeta 'maquetacion' se incluyen 3 carpetas:
+* css, la cual contiene un único archivo main.css con los estilos aplicados a los elementos de las páginas.
+* img, en la cual están las imágenes utilizadas en las paginas en formato png y svg.
+* js, con un único script js que contiene las interacciones/validaciones de rut y contraseña.
+* Por último se agregan los archivos html de cada una de las páginas de la app
 
 [js-badge-sm]: https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000&style=flat
 [js-web]: https://developer.mozilla.org/es/docs/Web/JavaScript
