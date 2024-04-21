@@ -23,9 +23,6 @@ Esta aplicación móvil funcionará como una interfaz amigable de visualización
 
 ## Prototipo
 
-> [!NOTE]
-> Debe reemplazar los URL de los archivos Figma. Ver al final de este archivo, ahí estan los links.
-
 <div align="center">
 
 [![figma-prot-badge]][figma-prot-url] [![figma-dis-badge]][figma-dis-url]
@@ -85,6 +82,6 @@ Esta aplicación móvil funcionará como una interfaz amigable de visualización
 [android-development-web]: https://developer.android.com/
 
 [figma-prot-badge]: https://img.shields.io/badge/Ver%20prototipo%20en%20Figma-F24E1E?logo=figma&logoColor=fff&style=flat
-[figma-prot-url]: #
+[figma-prot-url]: https://www.figma.com/proto/JN3aRnQ74SNULshUk7bxof/Prototipo-app-m%C3%B3vil?type=design&node-id=22-861&t=BR6e5hE3HvCraGvc-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=22%3A861&mode=design
 [figma-dis-badge]: https://img.shields.io/badge/Ver%20diseño%20UI%20en%20Figma-F24E1E?logo=figma&logoColor=fff&style=flat
-[figma-dis-url]: #
+[figma-dis-url]: https://www.figma.com/file/JN3aRnQ74SNULshUk7bxof/Prototipo-app-m%C3%B3vil?type=design&node-id=0%3A1&mode=design&t=usZsN6ZGvi7Php5k-1
