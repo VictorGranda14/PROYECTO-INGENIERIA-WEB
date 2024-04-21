@@ -1,4 +1,10 @@
-# Proyecto
+# Proyecto app móvil para robot de control de incendios
+
+## Integrantes
+* Ramiro Magnatera
+* Víctor Granda
+* Benjamín Rojas
+* Vicente Sarabia
 
 <div align="center">
 
