@@ -29,7 +29,10 @@
 }
 
 .maincolor {
-  background-color: #826e5a;
+  /*background-color: #3e7cb1;*/
+  /*background-color: #826e5a;
+  background-color: #DDB892;..*/
+  background-color: #DDB892;
 }
 
 .redcolor {
@@ -49,4 +52,19 @@
 .input-error {
   border: 2px solid red;
   /* Estilo para resaltar con borde rojo */
+}
+
+nav {
+
+  background-color: #B08968;
+
+}
+
+h3 {
+  color: #351905;
+
+}
+
+h2 {
+  color: #351905;
 }

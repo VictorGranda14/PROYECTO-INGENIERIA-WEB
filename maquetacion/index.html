@@ -26,7 +26,7 @@
       </p>
     <![endif]-->
 
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm redcolor">
+  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="fa-solid fa-fire"></i> HeatBot</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
@@ -38,13 +38,13 @@
             <a class="nav-link active" href="#"><i class="fa-solid fa-house"></i> Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/temperature.html"><i class="fa-solid fa-temperature-high"></i> Temperatura</a>
+            <a class="nav-link" href="./temperature.html"><i class="fa-solid fa-temperature-high"></i> Temperatura</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/gas.html"><i class="fa-solid fa-cloud"></i> Gases</a>
+            <a class="nav-link" href="./gas.html"><i class="fa-solid fa-cloud"></i> Gases</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/settings.html"><i class="fa-solid fa-gear"></i> Ajustes</a>
+            <a class="nav-link" href="./settings.html"><i class="fa-solid fa-gear"></i> Ajustes</a>
           </li>
         </ul>
       </div>
@@ -60,16 +60,18 @@
   </nav>
 
   <div class="container p-4">
-    <div class="container d-flex justify-content-between p-4 my-4 infocolor rounded">
-      <div>
+    <div class="container d-flex justify-content-between p-4 my-4  rounded"
+      style="background-color: #9C6644; border: 2px solid #7F5539;">
+      <div id="colorBase">
         <h1>Temperaturas</h1>
         <p>Revisa las últimas temperaturas medidas por el dispositivo</p>
       </div>
       <a class="btn" href="temperature.html"><i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
-    <div class="container d-flex justify-content-between p-4 my-4 infocolor rounded">
-      <div>
+    <div class="container d-flex justify-content-between p-4 my-4  rounded"
+      style="background-color: #B08968; border: 2px solid #7F5539;">
+      <div id=" colorBase">
         <h1>Gases</h1>
         <p>
           Revisa la calidad del aire y los compuestos gaseosos del ambiente
@@ -79,8 +81,9 @@
       <a class="btn" href="gas.html"><i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
-    <div class="container d-flex justify-content-between p-4 my-4 infocolor rounded">
-      <div>
+    <div class="container d-flex justify-content-between p-4 my-4  rounded"
+      style="background-color: #E6CCB2; border: 2px solid #7F5539;">
+      <div id="colorBase">
         <h1>Controlar</h1>
         <p>Toma control del movimiento del dispositivo</p>
       </div>
