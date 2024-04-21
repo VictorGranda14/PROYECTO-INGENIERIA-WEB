@@ -45,3 +45,8 @@
 .tempcolor {
   background-color: #a8c5ff;
 }
+
+.input-error {
+  border: 2px solid red;
+  /* Estilo para resaltar con borde rojo */
+}
