@@ -10,7 +10,7 @@
       <ion-card-title class="ion-text-center">Inicio de sesión</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <form id="formLogin">
+      <form id="formLogin" (ngSubmit)="login_form_submit()" [formGroup]="loginForm">
         <ion-item>
           <ion-label position="floating">Nombre de usuario</ion-label>
           <ion-input formControlName="username" required></ion-input>
@@ -19,7 +19,8 @@
           <ion-label position="floating">Contraseña</ion-label>
           <ion-input formControlName="password" type="password" required></ion-input>
         </ion-item>
-        <ion-button expand="block" id="botonInicio" class="ion-margin-top">
+
+        <ion-button type="submit" expand="block" id="botonInicio" class="ion-margin-top">
           Iniciar sesión
         </ion-button>
       </form>

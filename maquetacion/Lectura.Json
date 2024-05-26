@@ -1,0 +1,40 @@
+{
+    "sensores": {
+        "temperatura": {
+            "unidad": "Celsius",
+            "valor": 0
+        },
+        "humedad": {
+            "unidad": "Porcentaje",
+            "valor": 0
+        },
+        "CO": {
+            "unidad": "ppm",
+            "valor": 0
+        },
+        "CO2": {
+            "unidad": "ppm",
+            "valor": 0
+        },
+        "alcohol": {
+            "unidad": "ppm",
+            "valor": 0
+        },
+        "NH4": {
+            "unidad": "ppm",
+            "valor": 0
+        },
+        "acetona": {
+            "unidad": "ppm",
+            "valor": 0
+        },
+        "tolueno": {
+            "unidad": "ppm",
+            "valor": 0
+        },
+        "distancia": {
+            "unidad": "cm",
+            "valor": 0
+        }
+    }
+}

@@ -25,12 +25,14 @@ export class RegisterPage {
   }
 
   onSubmit() {
+    console.log(this.registerForm)
     const { rut, password, passwordVerify } = this.registerForm.value;
+    console.log(rut, password, passwordVerify)
     if (this.validarRUT(rut)) {
-      if (this.validarContraseña(password)) {
+      if (!(this.registerForm.controls["password"].status == "INVALID")) {
         if (password === passwordVerify) {
           this.mensajeError = '';
-          this.registerForm.reset();
+          //this.registerForm.reset();
         } else {
           this.mensajeError = 'La contraseña no coincide';
           this.registerForm.get('passwordVerify')!.setErrors({ mismatch: true });
@@ -69,9 +71,11 @@ export class RegisterPage {
   }
 
   validarContraseña(control: AbstractControl): ValidationErrors | null {
+    console.log(control.value)
     const password = control.value;
     const conNumero = /\d/;
-    if (password.length < 6 || !conNumero.test(password)) {
+    if (password?.length < 6 || !conNumero.test(password)) {
+      console.log("contraseña mala")
       return { invalid: true };
     }
     return null;
