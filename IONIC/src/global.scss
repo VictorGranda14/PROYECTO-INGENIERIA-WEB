@@ -36,10 +36,67 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
 
-h1 {
-    color: rgb(50, 48, 48);
-  }
+/* Variables de color según la maquetación */
+$body-background-color: #DDB892;
+$text-color: rgb(50, 48, 48);
 
-p {
-    color: rgb(50, 48, 48);
+/* Estilo global para el cuerpo de la aplicación */
+body {
+  background-color: $body-background-color;
+  color: $text-color;
+}
+
+/* Asegurar que todas las páginas de contenido tengan el mismo color de fondo */
+ion-content {
+  --background: $body-background-color;
+}
+
+ion-card-content{
+--background-color: $$text-color;
+}
+
+/* Estilo global para ion-content */
+ion-content {
+  --background: $body-background-color;
+}
+
+/* Estilo global para el texto en ion-card-content */
+ion-card-content {
+  color: $text-color;
+}
+
+/* Estilo global para el header */
+ion-header, ion-toolbar {
+  --background: #B08968;
+  color: $text-color;
+}
+
+/* Asegurar que todos los textos del toolbar sean negros */
+ion-toolbar {
+  --ion-color-base: $text-color;
+}
+
+/* Asegurar que todos los textos sean negros */
+ion-title, ion-label, ion-button, ion-card-title, ion-card-content, ion-card-header {
+  color: $text-color;
+}
+
+/* Clase utilitaria para centrar contenido */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Clase utilitaria para centrar texto */
+.center-text {
+  text-align: center;
+}
+
+/* Clase utilitaria para centrar imágenes */
+.center-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
