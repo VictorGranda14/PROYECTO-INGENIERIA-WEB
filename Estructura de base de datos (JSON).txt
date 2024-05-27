@@ -1,0 +1,52 @@
+Estructura de base de datos (JSON)
+A realizar con MONGO DB
+
+{
+   "sensores":{
+      "temperatura":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "humedad":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "CO":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "CO2":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "alcohol":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "NH4":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "acetona":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "tolueno":{
+         "unidad":"String",
+         "valor":"int"
+      },
+      "distancia":{
+         "unidad":"String",
+         "valor":"int"
+      }
+   },
+   "usuarios":{
+      "id":"int",
+      "nombre":"String",
+      "rut":"int",
+      "email":"String",
+      "región":"String",
+      "comuna":"String",
+      "contraseña":"String"
+   }
+}
