@@ -5,8 +5,8 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-card class="temp-card text-center">
-    <ion-card-header>
+  <ion-card class="temp-card center-text">
+    <ion-card-header >
       <ion-card-title>Temperatura Actual</ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -14,17 +14,17 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card class="infocard text-center">
+  <ion-card class="infocard text-center center-text">
     <ion-card-header>
       <ion-card-title>Temperaturas registradas durante funcionamiento</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-img src="assets/img/graph.png" alt="Gráfico de temperaturas" style="width: 60%; height: 60%;"></ion-img>
+      <ion-img src="assets/img/graph.png" class="center-img" alt="Gráfico de temperaturas" style="width: 30%; height: 60%;"></ion-img>
     </ion-card-content>
   </ion-card>
 
   <div class="d-flex justify-content-around mb-3">
-    <ion-card class="temp-minmax text-center">
+    <ion-card class="temp-minmax  center-text">
       <ion-card-header>
         <ion-card-title>Temperatura mínima</ion-card-title>
       </ion-card-header>
@@ -32,7 +32,7 @@
         <h1 class="display-3">12°</h1>
       </ion-card-content>
     </ion-card>
-    <ion-card class="temp-minmax text-center">
+    <ion-card class="temp-minmax  center-text">
       <ion-card-header>
         <ion-card-title>Temperatura máxima</ion-card-title>
       </ion-card-header>
@@ -42,28 +42,3 @@
     </ion-card>
   </div>
 </ion-content>
-
-<ion-footer>
-  <ion-toolbar>
-    <ion-tabs>
-      <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home" routerLink="/home">
-          <ion-icon name="home-outline"></ion-icon>
-          <ion-label>Inicio</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="temperature" routerLink="/temperature">
-          <ion-icon name="thermometer-outline"></ion-icon>
-          <ion-label>Temperatura</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="gas" routerLink="/gas">
-          <ion-icon name="cloud-outline"></ion-icon>
-          <ion-label>Gases</ion-label>
-        </ion-tab-button>
-        <ion-tab-button tab="settings" routerLink="/settings">
-          <ion-icon name="settings-outline"></ion-icon>
-          <ion-label>Ajustes</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-    </ion-tabs>
-  </ion-toolbar>
-</ion-footer>

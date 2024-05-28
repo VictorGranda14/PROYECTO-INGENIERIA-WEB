@@ -1,3 +1,23 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-router-outlet></ion-router-outlet>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" routerLink="/home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label style="color: #b6b2b2;">Inicio</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="temperature" routerLink="/temperature">
+      <ion-icon name="thermometer-outline"></ion-icon>
+      <ion-label style="color: #b6b2b2;">Temperatura</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="gas" routerLink="/gas">
+      <ion-icon name="cloud-outline"></ion-icon>
+      <ion-label style="color: #b6b2b2;">Gases</ion-label>
+    </ion-tab-button>
+    <ion-tab-button tab="settings" routerLink="/settings">
+      <ion-icon name="settings-outline"></ion-icon>
+      <ion-label style="color: #b6b2b2;">Ajustes</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+
