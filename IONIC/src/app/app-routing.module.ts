@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('./home/home.module').then((m) => m.HomePageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'temperature',
@@ -18,15 +20,18 @@ const routes: Routes = [
       import('./temperature/temperature.module').then(
         (m) => m.TemperaturePageModule
       ),
+    canActivate: [AuthGuard],
   },
   {
     path: 'gas',
     loadChildren: () => import('./gas/gas.module').then((m) => m.GasPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'settings',
     loadChildren: () =>
       import('./settings/settings.module').then((m) => m.SettingsPageModule),
+    canActivate: [AuthGuard],
   },
   {
     path: 'login',

@@ -56,4 +56,8 @@ export class LoginPage {
     console.log(this.loginForm);
     this.login();
   }
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
 }

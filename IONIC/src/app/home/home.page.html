@@ -1,8 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      <ion-icon name="flame-outline"></ion-icon> HeatBot
-    </ion-title>
+    <ion-title> <ion-icon name="flame-outline"></ion-icon> HeatBot </ion-title>
     <ion-buttons slot="end">
       <ion-button routerLink="/login">
         <ion-icon slot="icon-only" name="person-circle"></ion-icon>
@@ -12,7 +10,11 @@
 </ion-header>
 
 <ion-content class="ion-padding maincolor">
-  <ion-card class="infobox-2" routerLink="/temperature" style="background-color: #9C6644; border: 2px solid #7F5539;">
+  <ion-card
+    class="infobox-2"
+    routerLink="/temperature"
+    style="background-color: #9c6644; border: 2px solid #7f5539"
+  >
     <ion-card-content>
       <ion-row>
         <ion-col>
@@ -26,12 +28,18 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card class="infobox-2" routerLink="/gas" style="background-color: #B08968; border: 2px solid #7F5539;">
+  <ion-card
+    class="infobox-2"
+    routerLink="/gas"
+    style="background-color: #b08968; border: 2px solid #7f5539"
+  >
     <ion-card-content>
       <ion-row>
         <ion-col>
           <h1>Gases</h1>
-          <p>Revisa la calidad del aire y los compuestos gaseosos del ambiente para evaluar el comportamiento del fuego
+          <p>
+            Revisa la calidad del aire y los compuestos gaseosos del ambiente
+            para evaluar el comportamiento del fuego
           </p>
         </ion-col>
         <ion-col class="ion-text-end">
@@ -41,7 +49,11 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card class="infobox-2" routerLink="#" style="background-color: #E6CCB2; border: 2px solid #7F5539;">
+  <ion-card
+    class="infobox-2"
+    routerLink="#"
+    style="background-color: #e6ccb2; border: 2px solid #7f5539"
+  >
     <ion-card-content>
       <ion-row>
         <ion-col>
@@ -58,4 +70,3 @@
   <ion-button color="danger" id="BotonJ">Mostrar Json</ion-button>
   <div id="sensor-data"></div>
 </ion-content>
-
