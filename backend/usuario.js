@@ -4,17 +4,17 @@ const Schema = mongoose.Schema;
 
 const usuarioSchema = new Schema(
   {
-    nombreUsuario: String,
+    username: String,
     rut: String,
     email: String,
     region: String,
     comuna: String,
-    contraseña: String,
+    password: String,
   },
   {
     timeStamp: true,
     versionKey: false,
   }
 );
-const Usuario = mongoose.model("Usuario", usuarioSchema);
+const Usuario = mongoose.model("nombreUsuario", usuarioSchema);
 module.exports = Usuario;

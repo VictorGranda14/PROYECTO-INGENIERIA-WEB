@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
-
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  AbstractControl,
+  ValidationErrors,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -18,33 +23,40 @@ export class RegisterPage {
       email: ['', [Validators.required, Validators.email]],
       region: ['', Validators.required],
       comuna: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6), this.validarContraseña]],
+      password: [
+        '',
+        [Validators.required, Validators.minLength(6), this.validarContraseña],
+      ],
       passwordVerify: ['', Validators.required],
-      acceptTerms: [false, Validators.requiredTrue]
+      acceptTerms: [false, Validators.requiredTrue],
     });
   }
 
   onSubmit() {
-    console.log(this.registerForm)
+    console.log(this.registerForm);
     const { rut, password, passwordVerify } = this.registerForm.value;
-    console.log(rut, password, passwordVerify)
+    console.log(rut, password, passwordVerify);
     if (this.validarRUT(rut)) {
-      if (!(this.registerForm.controls["password"].status == "INVALID")) {
+      if (!(this.registerForm.controls['password'].status == 'INVALID')) {
         if (password === passwordVerify) {
           this.mensajeError = '';
           //this.registerForm.reset();
         } else {
           this.mensajeError = 'La contraseña no coincide';
-          this.registerForm.get('passwordVerify')!.setErrors({ mismatch: true });
+          this.registerForm
+            .get('passwordVerify')!
+            .setErrors({ mismatch: true });
         }
       } else {
-        this.mensajeError = 'La contraseña debe tener al menos 6 caracteres y 1 número';
+        this.mensajeError =
+          'La contraseña debe tener al menos 6 caracteres y 1 número';
         this.registerForm.get('password')!.setErrors({ invalid: true });
       }
     } else {
       this.mensajeError = 'RUT inválido. Por favor, intenta nuevamente.';
       this.registerForm.get('rut')!.setErrors({ invalid: true });
     }
+    this.postData(this.registerForm.value);
   }
 
   validarRUT(rut: string): boolean {
@@ -62,7 +74,8 @@ export class RegisterPage {
         }
 
         const codEsperado = 11 - (suma % 11);
-        const codCalculado = codEsperado === 11 ? 0 : codEsperado === 10 ? 'K' : codEsperado;
+        const codCalculado =
+          codEsperado === 11 ? 0 : codEsperado === 10 ? 'K' : codEsperado;
 
         return cod.toUpperCase() === codCalculado.toString();
       }
@@ -71,14 +84,32 @@ export class RegisterPage {
   }
 
   validarContraseña(control: AbstractControl): ValidationErrors | null {
-    console.log(control.value)
+    console.log(control.value);
     const password = control.value;
     const conNumero = /\d/;
     if (password?.length < 6 || !conNumero.test(password)) {
-      console.log("contraseña mala")
+      console.log('contraseña mala');
       return { invalid: true };
     }
     return null;
   }
+  postData(data: any) {
+    fetch('http://localhost:3000/registro_backend', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log('Success:', result);
+        // Maneja la respuesta de éxito
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        this.mensajeError =
+          'Ocurrió un error al registrar. Por favor, inténtelo de nuevo.';
+      });
+  }
 }
-
