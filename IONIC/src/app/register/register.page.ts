@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 import {
   FormBuilder,
   FormGroup,
@@ -16,7 +18,11 @@ export class RegisterPage {
   registerForm: FormGroup;
   mensajeError: string = '';
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
     this.registerForm = this.fb.group({
       username: ['', Validators.required],
       rut: ['', Validators.required],
@@ -56,7 +62,28 @@ export class RegisterPage {
       this.mensajeError = 'RUT inválido. Por favor, intenta nuevamente.';
       this.registerForm.get('rut')!.setErrors({ invalid: true });
     }
-    this.postData(this.registerForm.value);
+    this.register();
+    //this.postData(this.registerForm.value);
+  }
+  register() {
+    const { username, rut, email, region, comuna, password } =
+      this.registerForm.value;
+    this.authService
+      .register(username, rut, email, region, comuna, password)
+      .subscribe(
+        () => {
+          console.log('Usuario registrado');
+          this.router.navigate(['/login']);
+        },
+        (error) => {
+          if (error.status === 201) {
+            console.log('Usuario registrado con éxito');
+            this.router.navigate(['/login']);
+          } else {
+            console.error('Error en el registro', error);
+          }
+        }
+      );
   }
 
   validarRUT(rut: string): boolean {

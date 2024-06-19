@@ -1,24 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  Validators,
+  AbstractControl,
+  ValidationErrors,
+  Form,
+} from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
-export class LoginPage implements OnInit {
-
-  constructor(private fb: FormBuilder) {
-
+export class LoginPage {
+  loginForm: FormGroup;
+  constructor(
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private router: Router
+  ) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: [
+        '',
+        [Validators.required, Validators.minLength(6), this.validarContraseña],
+      ],
+    });
   }
-  loginForm = this.fb.group({
-    username: ['', Validators.required],
-    password: ['', [Validators.required, Validators.minLength(6), this.validarContraseña]],
 
-  });
-
-
-  ngOnInit() {
+  login() {
+    const { username, password } = this.loginForm.value;
+    this.authService.login(username, password).subscribe(
+      (res: any) => {
+        console.log('Usuario logueado');
+        localStorage.setItem('token', res.token);
+        this.router.navigate(['/home']);
+      },
+      (error) => {
+        console.error('Error en el login', error);
+      }
+    );
   }
   validarContraseña(control: AbstractControl): ValidationErrors | null {
     const password = control.value;
@@ -29,7 +53,7 @@ export class LoginPage implements OnInit {
     return null;
   }
   login_form_submit() {
-    console.log(this.loginForm)
+    console.log(this.loginForm);
+    this.login();
   }
-
 }
