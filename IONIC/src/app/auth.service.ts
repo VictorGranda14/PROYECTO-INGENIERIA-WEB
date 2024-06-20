@@ -19,19 +19,27 @@ export class AuthService {
     password: string,
     rol: string
   ): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, {
-      username,
-      rut,
-      email,
-      region,
-      comuna,
-      password,
-      rol,
-    });
+    return this.http.post(
+      `${this.apiUrl}/register`,
+      {
+        username,
+        rut,
+        email,
+        region,
+        comuna,
+        password,
+        rol,
+      },
+      { withCredentials: true }
+    );
   }
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, { username, password });
+    return this.http.post(
+      `${this.apiUrl}/login`,
+      { username, password },
+      { withCredentials: true }
+    );
   }
   isAuthenticated(): boolean {
     const token = localStorage.getItem('token');

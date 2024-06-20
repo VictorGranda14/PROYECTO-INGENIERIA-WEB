@@ -5,14 +5,20 @@ const dbconnect = require("./configBd");
 const modeloUser = require("./usuario");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
+const cookieParser = require("cookie-parser");
 
 //const router = express.Router();
 const app = express();
 const port = 3000;
 //const Usuario = require("../models/usuario");
+const corsOptions = {
+  origin: "http://localhost:4200", // Aquí especifica el origen permitido
+  credentials: true, // Permitir cookies
+};
 
-app.use(cors());
 app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(cors(corsOptions));
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
@@ -60,5 +66,11 @@ app.post("/login", async (req, res) => {
   const token = jwt.sign({ id: user._id, rol: user.rol }, "tu_secreto", {
     expiresIn: "1h",
   });
+  res.cookie("token", token, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "Strict",
+  });
+
   res.json({ token });
 });
