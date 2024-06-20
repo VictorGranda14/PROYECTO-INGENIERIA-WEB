@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
+import { jwtDecode } from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -37,7 +38,15 @@ export class LoginPage {
       (res: any) => {
         console.log('Usuario logueado');
         localStorage.setItem('token', res.token);
-        this.router.navigate(['/home']);
+        const decodedToken: any = jwtDecode(res.token);
+        const userRole = decodedToken.rol;
+        console.log('Usuario logueado');
+        console.log(userRole);
+        if (userRole == 'admin') {
+          this.router.navigate(['/gas']);
+        } else {
+          this.router.navigate(['/home']);
+        }
       },
       (error) => {
         console.error('Error en el login', error);

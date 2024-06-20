@@ -16,7 +16,8 @@ export class AuthService {
     email: string,
     region: string,
     comuna: string,
-    password: string
+    password: string,
+    rol: string
   ): Observable<any> {
     return this.http.post(`${this.apiUrl}/register`, {
       username,
@@ -25,6 +26,7 @@ export class AuthService {
       region,
       comuna,
       password,
+      rol,
     });
   }
 

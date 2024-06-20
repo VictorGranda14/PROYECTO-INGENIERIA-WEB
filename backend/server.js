@@ -31,7 +31,7 @@ app.post("/registro_backend", async (req, res) => {
   res.send(respuesta);
 });
 app.post("/register", async (req, res) => {
-  const { username, rut, email, region, comuna, password } = req.body;
+  const { username, rut, email, region, comuna, password, rol } = req.body;
   const hashedPassword = await bcrypt.hash(password, 10);
   const newUser = new modeloUser({
     username,
@@ -40,6 +40,7 @@ app.post("/register", async (req, res) => {
     region,
     comuna,
     password: hashedPassword,
+    rol,
   });
   await newUser.save();
   res.status(201).send("Usuario registrado");
@@ -56,6 +57,8 @@ app.post("/login", async (req, res) => {
   if (!isMatch) {
     return res.status(400).send("Contraseña incorrecta");
   }
-  const token = jwt.sign({ id: user._id }, "tu_secreto", { expiresIn: "1h" });
+  const token = jwt.sign({ id: user._id, rol: user.rol }, "tu_secreto", {
+    expiresIn: "1h",
+  });
   res.json({ token });
 });

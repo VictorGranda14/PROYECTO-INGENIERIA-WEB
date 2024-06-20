@@ -10,6 +10,7 @@ const usuarioSchema = new Schema(
     region: String,
     comuna: String,
     password: String,
+    rol: String,
   },
   {
     timeStamp: true,

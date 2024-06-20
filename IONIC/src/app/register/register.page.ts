@@ -35,6 +35,7 @@ export class RegisterPage {
       ],
       passwordVerify: ['', Validators.required],
       acceptTerms: [false, Validators.requiredTrue],
+      rol: ['user'],
     });
   }
 
@@ -66,10 +67,10 @@ export class RegisterPage {
     //this.postData(this.registerForm.value);
   }
   register() {
-    const { username, rut, email, region, comuna, password } =
+    const { username, rut, email, region, comuna, password, rol } =
       this.registerForm.value;
     this.authService
-      .register(username, rut, email, region, comuna, password)
+      .register(username, rut, email, region, comuna, password, rol)
       .subscribe(
         () => {
           console.log('Usuario registrado');
