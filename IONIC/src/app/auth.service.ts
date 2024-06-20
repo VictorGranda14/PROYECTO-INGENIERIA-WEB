@@ -46,7 +46,11 @@ export class AuthService {
     return !!token;
   }
 
-  logout(): void {
-    localStorage.removeItem('token');
+  logout(): Observable<any> {
+    return this.http.post(
+      `${this.apiUrl}/logout`,
+      {},
+      { withCredentials: true }
+    );
   }
 }

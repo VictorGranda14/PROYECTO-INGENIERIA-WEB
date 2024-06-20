@@ -56,7 +56,15 @@ export class HomePage implements OnInit {
     }
   }
   logout() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
+    this.authService.logout().subscribe({
+      next: (response) => {
+        console.log('Logout exitoso:', response.message);
+        localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+      },
+      error: (err) => {
+        console.error('Error en el logout', err);
+      },
+    });
   }
 }
