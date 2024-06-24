@@ -49,7 +49,7 @@ export class LoginPage {
         }
       },
       (error) => {
-        console.error('Error en el login', error);
+        console.error('Error en el login', error.toString());
       }
     );
   }

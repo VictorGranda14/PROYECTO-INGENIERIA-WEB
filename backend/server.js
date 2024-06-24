@@ -12,7 +12,7 @@ const app = express();
 const port = 3000;
 //const Usuario = require("../models/usuario");
 const corsOptions = {
-  origin: "http://localhost:4200", // Aquí especifica el origen permitido
+  origin: ["*"], // Aquí especifica el origen permitido
   credentials: true, // Permitir cookies
 };
 
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
