@@ -10,15 +10,24 @@ const cookieParser = require("cookie-parser");
 //const router = express.Router();
 const app = express();
 const port = 3000;
+const allowedOrigins = ["http://localhost:4200", "https://localhost", "*"];
 //const Usuario = require("../models/usuario");
 const corsOptions = {
-  origin: ["*"], // Aquí especifica el origen permitido
+  origin: function (origin, callback) {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  }, // Aquí especifica el origen permitido
   credentials: true, // Permitir cookies
+  allowedHeaders: ["Content-Type", "Authorization"], // Encabezados permitidos
 };
 
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.listen(port, "0.0.0.0", () => {
   console.log(`Server running at http://localhost:${port}`);

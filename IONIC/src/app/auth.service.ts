@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -19,6 +19,9 @@ export class AuthService {
     password: string,
     rol: string
   ): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
     return this.http.post(
       `${this.apiUrl}/register`,
       {
@@ -30,15 +33,18 @@ export class AuthService {
         password,
         rol,
       },
-      { withCredentials: true }
+      { headers, withCredentials: true }
     );
   }
 
   login(username: string, password: string): Observable<any> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+    });
     return this.http.post(
       `${this.apiUrl}/login`,
       { username, password },
-      { withCredentials: true }
+      { headers, withCredentials: true }
     );
   }
   isAuthenticated(): boolean {
