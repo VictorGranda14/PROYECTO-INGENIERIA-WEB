@@ -1,36 +1,42 @@
 .gascard {
-    border: 2px solid #b08968;
-    background-color: #e6ccb2;
-    margin-bottom: 16px;
-  }
-  
-  .ica-index {
-    border: 2px solid #b08968;
-  
-    ion-chip {
-      padding: 2px;
-      &.ion-color-success {
-        background-color: #639950;
-        color: white;
-      }
-      &.ion-color-warning {
-        background-color: #bd5a5a;
-        color: white;
-      }
-      &.ion-color-danger {
-        background-color: #f52121;
-        color: white;
-      }
+  border: 2px solid #b08968;
+  background-color: #e6ccb2;
+  margin-bottom: 16px;
+}
+
+.ica-index {
+  border: 2px solid #b08968;
+
+  ion-chip {
+    padding: 25px 80px; /* Ajusta el padding según sea necesario */
+    font-size: 1.2em;
+    &.ion-color-success {
+      background-color: #639950;
+      color: white;
+    }
+    &.ion-color-warning {
+      background-color: #bd5a5a;
+      color: white;
+    }
+    &.ion-color-danger {
+      background-color: #f52121;
+      color: white;
     }
   }
-  
-  .infocard {
-    border: 2px solid #b08968;
-    background-color: #f4e3d7;
-  }
-  
-  ion-row {
-    border-bottom: 1px solid #b08968;
-    padding: 8px 0;
-  }
-  
+}
+
+.infocard {
+  border: 2px solid #b08968;
+  background-color: #f4e3d7;
+}
+
+ion-row {
+  border-bottom: 1px solid #b08968;
+  padding: 8px 0;
+}
+ion-chip.large-chip {
+  font-size: 1.5em;
+  height: 3em;
+  padding: 0.5em;
+  margin: 0.5em;
+}

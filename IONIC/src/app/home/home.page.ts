@@ -15,46 +15,8 @@ export class HomePage implements OnInit {
     private router: Router
   ) {}
 
-  ngOnInit() {
-    const botonJ = document.getElementById('BotonJ');
-    if (botonJ) {
-      botonJ.addEventListener('click', (event) => {
-        event.preventDefault();
-        this.cargarDatos();
-      });
-    } else {
-      console.error('Elemento con id "BotonJ" no encontrado.');
-    }
-  }
+  ngOnInit() {}
 
-  cargarDatos() {
-    this.http.get('assets/sensores.Json').subscribe(
-      (data: any) => {
-        this.mostrarDatos(data);
-      },
-      (error) => {
-        console.error('Error cargando el archivo JSON:', error);
-      }
-    );
-  }
-
-  mostrarDatos(datos: any) {
-    const sensorDataDiv = document.getElementById('sensor-data');
-    if (sensorDataDiv) {
-      sensorDataDiv.innerHTML = ''; // Clear previous data
-      for (const sensor in datos.sensores) {
-        const detalles = datos.sensores[sensor];
-        const sensorElement = document.createElement('div');
-        sensorElement.className = 'sensor';
-        sensorElement.textContent = `${
-          sensor.charAt(0).toUpperCase() + sensor.slice(1)
-        }: ${detalles.valor} ${detalles.unidad}`;
-        sensorDataDiv.appendChild(sensorElement);
-      }
-    } else {
-      console.error('Elemento con id "sensor-data" no encontrado.');
-    }
-  }
   logout() {
     this.authService.logout().subscribe({
       next: (response) => {

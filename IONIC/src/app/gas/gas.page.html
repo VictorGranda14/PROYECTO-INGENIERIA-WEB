@@ -15,54 +15,78 @@
         <h1>(ICA)</h1>
       </div>
       <div>
-        <h1 class="display-1">55</h1>
+        <h1 class="display-1">{{ combinedIndex }}</h1>
       </div>
     </ion-card-content>
   </ion-card>
 
-  <ion-icon name="chevron-down-outline" style="font-size: 2em; position: relative; left: 30%;"></ion-icon>
-
   <div class="d-flex mb-3 ica-index">
-    <ion-chip color="success" class="flex-fill">
-      Sin riesgo
-    </ion-chip>
-    <ion-chip color="warning" class="flex-fill">
-      Moderado
-    </ion-chip>
-    <ion-chip color="danger" class="flex-fill">
-      Dañino
-    </ion-chip>
-    <ion-chip color="danger" class="flex-fill">
-      Muy dañino
-    </ion-chip>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-chip
+            [color]="airQuality === 'sin riesgo' ? 'success' : 'light'"
+            class="flex-fill"
+          >
+            Sin riesgo
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip
+            [color]="airQuality === 'moderado' ? 'warning' : 'light'"
+            class="flex-fill"
+          >
+            Moderado
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip
+            [color]="airQuality === 'dañino' ? 'danger' : 'light'"
+            class="flex-fill"
+          >
+            Dañino
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip
+            [color]="airQuality === 'muy dañino' ? 'danger' : 'light'"
+            class="flex-fill"
+          >
+            Muy dañino
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
-
   <hr />
   <ion-title size="large">Detalle</ion-title>
   <ion-card class="infocard">
     <ion-card-content>
-      <ion-grid>
+      <ion-grid *ngIf="gasData">
         <ion-row>
           <ion-col>CO</ion-col>
-          <ion-col>5 ppm</ion-col>
+          <ion-col>{{ gasData.Co }} ppm</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>Amoniaco</ion-col>
-          <ion-col>2 ppb</ion-col>
+          <ion-col>Alcohol</ion-col>
+          <ion-col>{{ gasData.Alcohol }} ppb</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>Sulfuro</ion-col>
-          <ion-col>0.0</ion-col>
+          <ion-col>Tolueno</ion-col>
+          <ion-col>{{ gasData.Tolueno }} ppb</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>Benceno</ion-col>
-          <ion-col>0.0</ion-col>
+          <ion-col>NH4</ion-col>
+          <ion-col>{{ gasData.Nh4 }} ppb</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col>Humo</ion-col>
-          <ion-col>0.0</ion-col>
+          <ion-col>Acetona</ion-col>
+          <ion-col>{{ gasData.Acetona }} ppb</ion-col>
         </ion-row>
       </ion-grid>
     </ion-card-content>
   </ion-card>
+  <ion-button expand="full" (click)="refreshData()"
+    >Actualizar Datos</ion-button
+  >
 </ion-content>
