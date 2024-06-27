@@ -47,6 +47,7 @@ export class RegisterPage {
       if (!(this.registerForm.controls['password'].status == 'INVALID')) {
         if (password === passwordVerify) {
           this.mensajeError = '';
+          this.register();
           //this.registerForm.reset();
         } else {
           this.mensajeError = 'La contraseña no coincide';
@@ -63,7 +64,7 @@ export class RegisterPage {
       this.mensajeError = 'RUT inválido. Por favor, intenta nuevamente.';
       this.registerForm.get('rut')!.setErrors({ invalid: true });
     }
-    this.register();
+
     //this.postData(this.registerForm.value);
   }
   register() {

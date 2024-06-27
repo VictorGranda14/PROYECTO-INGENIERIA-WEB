@@ -14,6 +14,16 @@
 
 </div>
 
+## Instrucciones para ejecutar el proyecto
+
+1. Instalar Node.js
+2. Instalar todas las dependencias del proyecto con `npm install` en el directorio del proyecto (PROYECTO-INGENIERIA-WEB).
+3. Para ejecutar el backend, se debe ingresar a la carpeta /backend, instalar las dependencias necesarias con `npm install` y luego ingresar el comando `node server.js` en el directorio del backend (PROYECTO-INGENIERIA-WEB/backend).
+4. Para compilar la aplicación web de Ionic, se ingresa a la carpeta PROYECTO-INGENIERIA-WEB/IONIC y se utiliza el comando `npm run start`
+5. Para ejecutar la API de Flask para poder leer los datos del robot mediante Bluetooth, se debe ingresar en la carpeta PROYECTO-INGENIERIA-WEB/sensorBackend y luego ingresar el comando `python api.py`. En caso de no tener el robot, se puede utilizar una versión de la API que genera datos aleatorios para los sensores, que se ejecuta con el comando `python app.py`
+6. El boton superior derecho con icono de usuario actúa como logout
+7. Usuario administrador para pruebas: `cristiano` contraseña: `comandantecr7`
+
 ## Descripción
 
 Esta aplicación móvil funcionará como una interfaz amigable de visualización de datos que recoge un robot contra incendios. Por otro lado la aplicación también aportará ciertas funcionalidades relacionadas al monitoreo de los ajustes del mismo.  
